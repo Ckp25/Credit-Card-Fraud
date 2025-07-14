@@ -109,7 +109,7 @@ The resulting SHAP feature importance bar plot (Figure 1) shows that features **
 
 These insights also provide guidance for potential dimensionality reduction or feature selection in future iterations, by focusing on the most impactful components.
 
-![SHAP Feature Importance Bar Plot](notebooks\shap_bar_train.png)  
+![SHAP Feature Importance Bar Plot](notebooks/shap_bar_train.png)  
 *Figure 1: SHAP feature importance bar plot showing mean absolute SHAP values for each feature on the train set.*
 
 #### **Beeswarm Plot: Global Impact and Directionality**
