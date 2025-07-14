@@ -125,7 +125,7 @@ From the plot, we observe the following:
 
 These observations validate that the model’s decision boundaries align with patterns identifiable in the PCA‑transformed feature space, and that it leverages extreme feature values to identify fraud.
 
-![SHAP Beeswarm Plot](notebooks\shap_beeswarm_train.png)  
+![SHAP Beeswarm Plot](notebooks/shap_beeswarm_train.png)  
 *Figure 2: SHAP beeswarm plot showing the distribution and directionality of feature contributions across the training set.*
 
 #### **Dependence Plots: Feature–SHAP Relationships**
@@ -141,7 +141,7 @@ Key observations:
 
 These insights highlight the model’s reliance on extreme or anomalous feature values and help explain why subtle frauds with near‑normal values may sometimes be missed.
 
-![SHAP Dependence Plots](notebooks\shap_dependence_top5.png)  
+![SHAP Dependence Plots](notebooks/shap_dependence_top5.png)  
 *Figure 3: SHAP dependence plots for the top five features, showing how feature values relate to their SHAP contributions.*
 
 ## **Threshold Tuning**
@@ -163,10 +163,10 @@ On the **test set**, the custom score peaked at a threshold of approximately **0
 
 This threshold was selected as the recommended operating point, as it aligns with business objectives by prioritizing recall without excessively compromising precision.
 
-![Threshold Tuning — Train Set](notebooks\threshold_tuning_curves.png)  
+![Threshold Tuning — Train Set](notebooks/threshold_tuning_curves.png)  
 *Figure 4: Precision, recall, and custom score as functions of threshold on the training set.*
 
-![Threshold Tuning — Test Set](notebooks\threshold_tuning_custom.png)  
+![Threshold Tuning — Test Set](notebooks/threshold_tuning_custom.png)  
 *Figure 5: Precision, recall, and custom score as functions of threshold on the test set.*
 
 ### **Confusion Matrix and Evaluation Metrics at Recommended Threshold**
@@ -188,7 +188,7 @@ From the confusion matrix, the following performance metrics were computed:
 
 These results indicate that the model achieves a strong balance between precision and recall, aligning with the business objective of catching frauds while keeping false alarms low.
 
-![Confusion Matrix at Threshold=0.95](notebooks\cm.png)  
+![Confusion Matrix at Threshold=0.95](notebooks/cm.png)  
 *Figure 6: Confusion matrix on the test set at the recommended threshold of 0.95.*
 
 
@@ -206,11 +206,11 @@ Key observations:
 
 These findings align with the SHAP explainability results, which showed that the model relies heavily on extreme values of a few features to identify fraud.
 
-![TP vs FN Distribution on V4](notebooks\tp_vs_fn_V4.png)  
-![TP vs FN Distribution on V14](notebooks\tp_vs_fn_V14.png)  
-![TP vs FN Distribution on V16](notebooks\tp_vs_fn_V16.pngg)  
-![TP vs FN Distribution on V7](notebooks\tp_vs_fn_V7.png)  
-![TP vs FN Distribution on V17](notebooks\tp_vs_fn_V17.png)  
+![TP vs FN Distribution on V4](notebooks/tp_vs_fn_V4.png)  
+![TP vs FN Distribution on V14](notebooks/tp_vs_fn_V14.png)  
+![TP vs FN Distribution on V16](notebooks/tp_vs_fn_V16.pngg)  
+![TP vs FN Distribution on V7](notebooks/tp_vs_fn_V7.png)  
+![TP vs FN Distribution on V17](notebooks/tp_vs_fn_V17.png)  
 
 *Figure 7: KDE plots of TP vs FN distributions for the top five most important features.*
 
@@ -218,7 +218,6 @@ These findings align with the SHAP explainability results, which showed that the
 
 The error analysis suggests potential directions for improvement:
 - Explore additional feature engineering to better separate subtle frauds from normal transactions.
-- Consider training with cost‑sensitive loss functions or synthetic oversampling (e.g., SMOTE) to improve recall on borderline cases.
 - Incorporate domain knowledge to design new features that capture patterns beyond the PCA‑transformed components.
 
 
