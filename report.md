@@ -194,7 +194,7 @@ These results indicate that the model achieves a strong balance between precisio
 
 ## **6. Error Analysis**
 
-A critical step in evaluating a fraud detection model is understanding where it makes mistakes. In particular, **false negatives (FN)** — fraudulent transactions that the model fails to detect — are of high business concern. We compared the distribution of key features in correctly detected frauds (True Positives, TP) and missed frauds (False Negatives, FN) to identify patterns behind these errors.
+A critical step in evaluating a fraud detection model is understanding where it makes mistakes. In particular, **false negatives (FN)**, fraudulent transactions that the model fails to detect, are of high business concern. We compared the distribution of key features in correctly detected frauds (True Positives, TP) and missed frauds (False Negatives, FN) to identify patterns behind these errors.
 
 ### **6.1 FN vs TP Feature Distributions**
 
